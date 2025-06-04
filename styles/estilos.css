@@ -1,0 +1,584 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f75bc 70%, #000);
+  font-family: Arial, sans-serif;
+}
+
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+.header img{
+  height: 550px;
+  margin-bottom: 130px;
+}
+
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(230, 230, 230, 0.4);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 15px;
+}
+
+.titulo{
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+input[type="email"],
+    input[type="password"]{
+      width: 70%;
+      padding: 12px 45px 12px 15px;
+      border-radius: 30px;
+      font-size: 14px;
+      background-color: #ffffffcc;
+      color: #333;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    .login-btn {
+      width: 50%;
+      margin: 30px 0 20px;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(to bottom, #00aaff, #003d66);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .register b {
+      color: white;
+    }
+
+    .register a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+.boton:hover {
+  background-color: #333;
+}
+
+label{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.fondo1{
+  background-color: #00aaff;
+}
+
+.fondo {
+  position: fixed; /* Se queda fija al fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Para que quede detrás del contenido */
+}
+
+main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fondo img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Hace que la imagen quede de fondo */
+  filter: blur(4px);
+  object-fit: cover; /* Ajusta la imagen para cubrir */
+}
+
+
+/*//////////////CSS PARA INICIO.HTML///////////////*/
+.menulogo{
+  height: 70px;
+  border-radius: 15px;
+}
+.boton{
+  margin-right: 20px;
+}
+.menulogo1{
+  height: 70px;
+  border-radius: 15px;
+  display: none;
+}
+.noticias{
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-top: 30px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/*//////////CSS QR.HTML/////////*/
+.qr{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20%;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+input, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+/*//////////CSS perfil.html/////////*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #00aaff; /* Borde azul */
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 5%;
+  padding-bottom: 80px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Botones */
+.menu-btn {
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #00aaff;
+  color: #00aaff;
+  font-size: 1rem;
+  padding: 20px 40px;
+  margin: 15px 0;
+  width: 90%;
+  max-width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 65px;
+}
+
+.menu-btn:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1.03);
+}
+
+/*//////////CSS USUARIO.html/////////*/
+
+.perfil-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin: 60px auto;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+}
+
+/* Imagen de perfil */
+.perfil-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+/* Línea divisoria */
+hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  margin: 10px 0;
+}
+
+/* Botón OK */
+.ok-btn {
+  margin-top: 15px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #66ccff, #0066cc);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ok-btn:hover {
+  transform: scale(1.05);
+}
+
+/*//////////CSS SOPORTE.html/////////*/
+
+/* Tarjeta principal */
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 350px;
+  margin: 50px auto;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Usuario */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: 0.9em;
+  color: red;
+}
+
+/* Detalles de contacto */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+}
+
+.icon {
+  font-size: 1.2em;
+}
+
+.label {
+  flex: 1;
+  margin-left: 10px;
+  color: #333;
+}
+
+.value {
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-outline, .btn-fill {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
+
+.btn-outline:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-fill {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.btn-fill:hover {
+  background-color: #333;
+}
+
+/*////////////MEDIA/////////////*/
+@media (max-width: 1093px){
+  .qr h1{
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px){
+  .menulogo{
+    display: none;
+  }
+  .menulogo1{display: inline-block;}
+
+  .qr h1{
+    text-align: center;
+  }
+}
+
+/*///////////////////////////////*/
+@media (max-width: 650px){
+  .header{
+    margin-bottom: -70px;
+  }
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .menulogo{
+    display: none;
+  }
+  
+  .menulogo1{
+    height: 60px;
+  }
+}
+
+
+/*////////////////////////////////*/
+@media (max-width: 430px){
+  .header{
+    margin-bottom: -110px;
+  }
+
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+
+/*////////////////////////////////*/
+@media (max-width: 375px){
+  .header{
+    margin-bottom: -110px;
+  }
+
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .menulogo1{
+    height: 55px;
+  }
+}
+
+
+/*////////////////////////////////*/
+@media (max-width: 360px){
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .menulogo1{
+    height: 50px;
+  }
+}
+/*.header {
+  width: 480px;
+}
+.header img{
+  width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(230, 230, 230, 0.4); /* Fondo celeste claro translúcido
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-left: 25px;
+  margin-top: 50px;
+  width: 1000px;
+}
+
+.titulo {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin-top: -60px;
+  margin-bottom: 30px;
+}
+
+.login-container {
+  width: 90%;
+  max-width: 350px;
+  padding: 20px;
+  color: white;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.input-box {
+  position: relative;
+  margin-top: 10px;
+  height: 25px;
+  width: 700px;
+}
+
+.input-box {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 45px 12px 15px;
+      border: none;
+      border-radius: 30px;
+      font-size: 14px;
+      background-color: #ffffffcc;
+      color: #333;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    .toggle-visibility {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .login-btn {
+      width: 100%;
+      margin: 30px 0 20px;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(to bottom, #00aaff, #003d66);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .register b {
+      color: white;
+    }
+
+    .register a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .back-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+.boton:hover {
+  background-color: #333;
+}
+
+.menulogo {
+  display: block;
+  width: 60px; /* Ajusta el tamaño según necesites 
+  margin-top: 5px;
+  }
+
+ /* RESPONSIVE para celulares (pantallas <= 480px) */
+ /*@media (max-width: 480px) {
+  .header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contenedor {
+    width: 90%;
+    padding: 30px 10px;
+  }
+
+  .titulo {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .boton {
+    width: 90%;
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+  */
