@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es" class="Tabla">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informe de Solicitudes</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <img src="/imagenes/logo1.webp" alt="Logo de la empresa" loading="lazy" />
+  </header>
+
+  <div class="table-container">
+    <h2>Informe de Solicitudes</h2>
+    <div class="search-and-button-container">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar..." />
+      </div>
+      <div class="buttons">
+        <button>Generar informe</button>
+        <button>Descargar PDF</button>
+        <button>Descargar JSON</button>
+      </div>
+    </div>
+
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Tipo de Solicitud</th>
+          <th>Día de Solicitud</th>
+          <th>Horario</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <div class="pagination-info">
+        Mostrando 1-10 de 99
+      </div>
+      <div class="pagination-controls" id="paginationNumbers">
+      </div>
+      </div>
+  </div>
+
+    <nav class="bottom-nav">
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-search"></i></a>
+
+        <a href="QR.html" class="qr-button"></a>
+        
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-arrow-left"></i></a>
+    </nav>
+    
+  <script src="/JavaScript/Tablas.js"></script>
+</body>
+</html>
