@@ -41,16 +41,16 @@ body {
   letter-spacing: 5px;
 }
 
-input[type="email"],
-    input[type="password"]{
-      width: 70%;
-      padding: 12px 45px 12px 15px;
-      border-radius: 30px;
-      font-size: 14px;
-      background-color: #ffffffcc;
-      color: #333;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
-    }
+input[type="text"],
+input[type="password"] {
+  width: 70%;
+  padding: 12px 45px 12px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  background-color: #ffffffcc;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
 
     input::placeholder {
       color: #aaa;
