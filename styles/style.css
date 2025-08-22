@@ -105,6 +105,59 @@ body {
     background-size: cover;
 }
 
+
+
+/* Overlay para menú hamburguesa */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* Menú lateral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  margin-bottom: 20px;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
 /* Estilos de GenerarInforme.html*/
 
 .container {
@@ -232,17 +285,90 @@ input, select {
     background: linear-gradient(to right, #6e00cc, #000000);
 }
 
-/* Estilos para QR.html*/
+/* ======================== Estilos de QRGenerado.html ======================== */
 
-.QR-wrapper {
+.QR {
+    /* Ajustes específicos para el QR y logo */
+    #qrcode {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      display: none; /* oculto al principio */
+    }
+    #qrcode canvas {
+      width: 200px !important;
+      height: 200px !important;
+    }
+    #logo-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;      /* tamaño más grande */
+      height: 80px;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 10;
+    }
+    #logo-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .btn-generar {
+      margin-top: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .QR-text {
+      text-align: center;
+      font-family: monospace;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .QR-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* para centrar verticalmente con margen */
+}
+
+.QR-box {
+  text-align: center;
+}
+
+#qrcode {
+  margin: 0 auto; /* centrado horizontal */
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: none;
+}
+
+
+
+  .QR-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
+    margin-top: 50px;
+    align-content: center;
+    justify-content: center;
+  }
 
-.QR-box {
+  .QR-text {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .QR-box {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -250,39 +376,38 @@ input, select {
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     height: 450px;
-}
+    width: 400px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-.QR-text {
-    font-weight: bold;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.qr {
+  .qr {
+    display: none;
     width: 250px;
     height: 250px;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-generar {
+    background-color: rgb(0, 17, 255);
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+  }
+  .btn-generar:hover {
+    background-color: #6e00cc;
+  }
 }
 
-/* Estilos de Login.html */
 
-.loginForm {
-    input, select {
-    width: 100%;
-    padding: 12px;
-    background: #ffffff;  
-    color: #000000;        
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-align: left; 
-    margin-bottom: 50px;
-    }
-}
 
 /* Estilos de Mantenimiento.html */
 
@@ -508,4 +633,147 @@ button:hover {
         max-height: unset;
         overflow-y: auto;
     }
+}
+
+
+/* ======================== Estilos de Login.html ========================*/
+
+.Login {
+  .loginForm {
+    input, select {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;  
+    color: #000000;        
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left; 
+    margin-bottom: 50px;
+    }
+  }
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .login-card {
+    display: flex;
+    width: 700px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    z-index: 99999;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .left-panel {
+    background: linear-gradient(135deg, #0c8dc9 85%, transparent 60%);
+    color: white;
+    padding: 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .left-panel h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .signup-btn {
+    background: white;
+    color: #0c8dc9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .signup-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .right-panel {
+    padding: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .right-panel h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #555;
+  }
+
+  .required {
+    color: red;
+    margin-left: 3px;
+  }
+
+  form input {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  form input:focus {
+    border-color: #0c8dc9;
+  }
+
+  .signin-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background: none;
+    border: 2px solid #0c8dc9;
+    color: #0c8dc9;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+  }
+
+  .signin-btn:hover {
+    background: #0c8dc9;
+    color: white;
+  }
+
+  .forgot-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #0c8dc9;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
 }
