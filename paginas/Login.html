@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body class="Login">
-  <header class="header" role="banner">
-    <img src="/imagenes/logo1.webp" alt="Logo de la empresa" loading="lazy" />
-  </header>
+  <div id="menu-container"></div>
 
   <div class="overlay"></div>
 
@@ -23,7 +21,6 @@
         <div class="right-panel">
           <h3>Login</h3>
           <form class="login-form">
-          <!--<span class="required"></span>-->
             <label for="username">Usuario</label>
             <input type="text" id="username" placeholder="Escriba su Usuario" />
 
@@ -38,10 +35,13 @@
     </div>
     </div>
 
-  <nav class="bottom-nav">
-    <a href="#"><i class="fas fa-home"></i></a>
-  </nav>
+  <div id="navMobile-container"></div>
+
+  
   <script src="/JavaScript/Validaciones.js"></script>
+  <script src="/JavaScript/Menu.js"></script>
+  <script src="/JavaScript/Hamburguesa.js"></script>
+  <script src="/JavaScript/NavMobile.js"></script>
 </body>
 </html>
 
