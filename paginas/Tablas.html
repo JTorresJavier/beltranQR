@@ -9,29 +9,9 @@
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body class="Table">
-
-  <!-- Overlay principal (por ejemplo para modales) <div class="overlay"></div> -->
   
-  <!-- Overlay del menú hamburguesa -->
-  <div class="menu-overlay" id="menuOverlay"></div>
-
-  <!-- Menú lateral -->
-  <aside class="side-menu" id="sideMenu">
-    <ul>
-      <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
-      <li><a href="#"><i class="fas fa-newspaper"></i> Noticias</a></li>
-      <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
-      <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
-    </ul>
-  </aside>
-
-  <header class="header">
-    <img src="/imagenes/logo1.webp" alt="Logo de la empresa" class="logo" loading="lazy">
-    <button class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
-  </header>
-
+  <div id="menu-container"></div>
+  
   <div class="table-container">
     <h2>Informe de Solicitudes</h2>
     <div class="search-and-button-container">
@@ -69,18 +49,13 @@
       </div>
   </div>
 
-    <nav class="bottom-nav">
-        <a href="#"><i class="fas fa-home"></i></a>
-        <a href="#"><i class="fas fa-search"></i></a>
+  <div id="navMobile-container"></div>
 
-        <a href="QR.html" class="qr-button"></a>
-        
-        <a href="#"><i class="fas fa-user"></i></a>
-        <a href="#"><i class="fas fa-arrow-left"></i></a>
-    </nav>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>  
   <script src="/JavaScript/Descarga.js"></script>
   <script src="/JavaScript/Tablas.js"></script>
+  <script src="/JavaScript/Menu.js"></script>
   <script src="/JavaScript/Hamburguesa.js"></script>
+  <script src="/JavaScript/NavMobile.js"></script>
 </body>
 </html>

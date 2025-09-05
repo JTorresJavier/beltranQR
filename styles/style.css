@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* ==================== Estilos generales ==================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -105,10 +105,7 @@ body {
     background-size: cover;
 }
 
-
-
-/* Overlay para menú hamburguesa */
-.menu-overlay {
+.menu-overlay { /* Overlay para menú hamburguesa */
   position: fixed;
   top: 0;
   left: 0;
@@ -125,8 +122,8 @@ body {
   opacity: 1;
   visibility: visible;
 }
-/* Menú lateral */
-.side-menu {
+
+.side-menu { /* Menú lateral */
   position: fixed;
   top: 0;
   left: -250px;
@@ -157,9 +154,7 @@ body {
   color: #333;
   font-size: 18px;
 }
-
-/* Estilos de GenerarInforme.html*/
-
+/* ==================== GenerarInforme.html ====================*/
 .container {
     margin: auto;
     margin-top: 100px;
@@ -228,8 +223,7 @@ input, select {
     opacity: 0.9;
 }
 
-/* Estilos de Home.html*/
-
+/* ==================== Home.html ==================== */
 .news-card {
     margin: 80px auto auto auto; 
     padding: 25px 20px;
@@ -285,359 +279,7 @@ input, select {
     background: linear-gradient(to right, #6e00cc, #000000);
 }
 
-/* ======================== Estilos de QRGenerado.html ======================== */
-
-.QR {
-    /* Ajustes específicos para el QR y logo */
-    #qrcode {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      display: none; /* oculto al principio */
-    }
-    #qrcode canvas {
-      width: 200px !important;
-      height: 200px !important;
-    }
-    #logo-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 80px;      /* tamaño más grande */
-      height: 80px;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 10;
-    }
-    #logo-overlay img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .btn-generar {
-      margin-top: 10px;
-      padding: 10px 20px;
-      cursor: pointer;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .QR-text {
-      text-align: center;
-      font-family: monospace;
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .QR-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh; /* para centrar verticalmente con margen */
-}
-
-.QR-box {
-  text-align: center;
-}
-
-#qrcode {
-  margin: 0 auto; /* centrado horizontal */
-  position: relative;
-  width: 250px;
-  height: 250px;
-  display: none;
-}
-
-
-
-  .QR-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 50px;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .QR-text {
-    font-weight: bold;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .QR-box {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    height: 450px;
-    width: 400px;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .qr {
-    display: none;
-    width: 250px;
-    height: 250px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 30px auto;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .btn-generar {
-    background-color: rgb(0, 17, 255);
-    margin-top: 20px;
-    width: 150px;
-    height: 50px;
-  }
-  .btn-generar:hover {
-    background-color: #6e00cc;
-  }
-}
-
-
-
-/* Estilos de Mantenimiento.html */
-
-.maintenance-box-wrapper {
-
-  flex:1; 
-  display:flex; 
-  justify-content:center; 
-  align-items:center; 
-  text-align:center; 
-  z-index:1; 
-  position:relative; 
-  padding: 20px;
-}
-
-.maintenance-box {
-    
-    background: rgba(255, 255, 255, 0.7);
-    padding: 40px 30px;
-    border-radius: 20px;
-    max-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-
-
-
-
-/* Tabla */
-
-.table-container {
-  margin: 30px;
-  z-index: 999;
-}
-
-.table-title {
-  text-align: center;
-  margin-top: 70px;
-  color: rgb(255, 255, 255);
-  margin-bottom: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-thead {
-  background-color: #1976d2;
-  color: white;
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
-}
-
-tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
-.dni {
-  font-size: 0.9em;
-  color: gray;
-  display: block;
-  margin-top: 4px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 80px;
-}
-
-.pagination-info {
-  color: #ffffff;
-}
-.pagination-controls button {
-  padding: 6px 12px;
-  margin: 0 5px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.pagination {
-  flex-direction: column;
-  align-items: center;
-}
-
-.pagination-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-
-.pagination-controls button.active {
-  background-color: #0077ff;
-  font-weight: bold;
-}
-
-
-
-.pagination-controls button:disabled {
-  background-color: #ccc;
-  cursor: default;
-}
-
-.search-and-button-container {
-  display: flex;
-  width: 100%;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.search-container input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: left;
-  background-color: #fff; 
-  color: #000;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
-}
-
-button {
-  padding: 8px 16px;
-  background-color: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-    background-color: #1565c0;
-}
-
-  
-
-
-
-
-
-
-
-/* Versión móvil */
-@media (min-width: 768px) {
-    .bottom-nav {
-    display: none;
-    }
-}
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        background-color: #007BFF;
-        position: fixed;      
-        top: 0;              
-        right: 0;            
-        width: 200px;
-        height: 100vh;      
-        transform: translateX(100%); 
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
-        margin-top: 60px;
-    }
-
-    .nav-links.open {
-        transform: translateX(0);  
-    }
-
-    .nav-links a {
-        padding: 15px;
-        color: white;
-        text-decoration: none;
-        border-top: 1px solid #005ecb;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .mobile-menu-button {
-        display: block;
-    }
-    /* Tablas */
-    .search-and-button-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .buttons {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .buttons button {
-      width: 100%;
-    }
-}
-
- @media (max-height: 500px) {
-    .container {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        max-height: unset;
-        overflow-y: auto;
-    }
-}
-
-
-/* ======================== Estilos de Login.html ========================*/
-
+/* ==================== Login.html ==================== */
 .Login {
   .loginForm {
     input, select {
@@ -777,3 +419,464 @@ button:hover {
     text-decoration: underline;
   }
 }
+/* ==================== PaginaenMantenimiento.html ==================== */
+.maintenance-box-wrapper {
+
+  flex:1; 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  text-align:center; 
+  z-index:1; 
+  position:relative; 
+  padding: 20px;
+}
+
+.maintenance-box {
+    
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+/* ==================== QRGenerador.html ==================== */
+.QR {
+    #qrcode {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      display: none; 
+    }
+    #qrcode canvas {
+      width: 200px;
+      height: 200px;
+    }
+    #logo-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;      
+      height: 80px;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 10;
+    }
+    #logo-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .btn-generar {
+      margin-top: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .QR-text {
+      text-align: center;
+      font-family: monospace;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .QR-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; 
+}
+
+.QR-box {
+  text-align: center;
+}
+
+#qrcode {
+  margin: 0 auto; 
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: none;
+}
+
+
+
+  .QR-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .QR-text {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .QR-box {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    height: 450px;
+    width: 400px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .qr {
+    display: none;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-generar {
+    background-color: rgb(0, 17, 255);
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+  }
+  .btn-generar:hover {
+    background-color: #6e00cc;
+  }
+}
+
+/* ==================== RecuperarContraseña.html ==================== */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  margin-top: 70px;
+  font-size: 15px;
+  z-index: 10; 
+}
+
+.steps > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #666666;
+  z-index: 10; 
+}
+
+.steps > div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40px;
+  height: 2px;
+  background: #ccc;
+  transform: translateY(-50%);
+}
+
+.steps > div:last-child::after {
+  display: none;
+}
+
+.steps .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ccc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+.steps > div.active {
+  color: #1465a8;
+  font-weight: bold;
+}
+
+.steps > div.active .circle {
+  background: #1465a8;
+}
+
+.steps > div.active::after {
+  background: #1465a8;
+}
+
+.steps > div.completed {
+  color: #2d8659;
+  font-weight: bold;
+}
+
+.steps > div.completed .circle {
+  background: #2d8659;
+  content: "✔";
+  font-size: 14px;
+}
+
+.steps > div.completed::after {
+  background: #2d8659;
+}
+
+.recovery-password-container {
+  position: relative; 
+  background-color: #e2dcdc;
+  padding: 30px;
+  border-radius: 15px;
+  width: 500px;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10; 
+}
+
+.recovery-password-info-box {
+  background-color: #2290bb;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background: #0d73c7;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:hover {
+  background: #043863;
+}
+/* ==================== Scanner.html ==================== */
+/* ==================== Tablas.html ==================== */
+.table-container {
+  margin: 30px;
+  z-index: 999;
+}
+
+.table-title {
+  text-align: center;
+  margin-top: 70px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #1976d2;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.dni {
+  font-size: 0.9em;
+  color: gray;
+  display: block;
+  margin-top: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+.pagination-info {
+  color: #ffffff;
+}
+.pagination-controls button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination {
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.pagination-controls button.active {
+  background-color: #0077ff;
+  font-weight: bold;
+}
+
+
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.search-and-button-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left;
+  background-color: #fff; 
+  color: #000;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+/* ==================== Versión móvil ==================== */
+@media (min-width: 768px) {
+    .bottom-nav {
+    display: none;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #007BFF;
+        position: fixed;      
+        top: 0;              
+        right: 0;            
+        width: 200px;
+        height: 100vh;      
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        margin-top: 60px;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);  
+    }
+
+    .nav-links a {
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        border-top: 1px solid #005ecb;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+    /* Tablas */
+    .search-and-button-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .buttons {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .buttons button {
+      width: 100%;
+    }
+}
+
+ @media (max-height: 500px) {
+    .container {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        max-height: unset;
+        overflow-y: auto;
+    }
+}
+
+
+
+
+
+
+
+
