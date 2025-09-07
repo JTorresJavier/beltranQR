@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok && data.success) {
         showAlert("Inicio de sesión exitoso.");
-        window.location.href = "../paginas/Home.html"; // Redirige al home
+        window.location.href = "../paginas/Home.html"; 
       } else {
         showAlert(data.message || "Credenciales incorrectas.");
       }
@@ -43,25 +43,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Función para validar el formato del email
   function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     return regex.test(email);
   }
 
-  // Sanitización de la entrada para evitar caracteres peligrosos
   function sanitize(input) {
     const element = document.createElement("div");
     element.innerText = input;
-    return element.innerHTML; // Utiliza innerText para evitar XSS
+    return element.innerHTML;
   }
 
-  // Mostrar alertas con mensajes
   function showAlert(message) {
     alert(message);
   }
 
-  // Establecer el foco en un campo de formulario
   function setFocus(element) {
     element.focus();
   }
