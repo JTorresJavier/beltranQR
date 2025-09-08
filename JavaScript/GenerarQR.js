@@ -4,7 +4,7 @@ const textoQR = document.getElementById("textoQR");
 let QR;
 
 function generarQR() {
-    const Valor = Math.random().toString(36).substring(2, 10);
+    const Valor = Math.random().toString(36).substring(2);
     const codigoCompleto = "Usuario-Entrada/Salida-" + Valor;
     if (QR) {
         QR.clear();
@@ -17,5 +17,5 @@ function generarQR() {
     }
     QR.makeCode(codigoCompleto);
     qrContainer.style.display = "block";
-    textoQR.textContent = `Acerca el código QR al lector para escanear`;
+    textoQR.textContent = "Acerca el código QR al lector para escanear";
 }

@@ -1,111 +1,32 @@
-/* ==================== Estilos generales ==================== */
+/* ======================== Estilos generales ======================== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-    height: 100%;
-    font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: url('/imagenes/IBeltran.webp') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
+  background: url('/imagenes/IBeltran.webp') no-repeat center center fixed;
+  background-size: cover;
+  flex-direction: column;
+  padding-bottom: 90px;
 }
 
 .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 0;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 5;
 }
 
-.header {
-    background-color: #007BFF;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0 20px;
-    z-index: 1000;
-}
-
-.header img {
-    height: 45px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.mobile-menu-button {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    border-top: 2px solid #a259ff;
-    z-index: 999;
-}
-
-.bottom-nav a {
-    color: black;
-    font-size: 1.8rem;
-    text-decoration: none;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bottom-nav a:hover {
-    color: #a259ff;
-}
-
-.bottom-nav .qr-button {
-    position: relative;
-    top: -20px; 
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(162, 89, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background: url('/imagenes/QRProyecto.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.menu-overlay { /* Overlay para menú hamburguesa */
+.menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -123,7 +44,34 @@ body {
   visibility: visible;
 }
 
-.side-menu { /* Menú lateral */
+.header {
+  background-color: #007BFF;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.header img {
+  height: 45px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.side-menu {
   position: fixed;
   top: 0;
   left: -250px;
@@ -154,8 +102,146 @@ body {
   color: #333;
   font-size: 18px;
 }
-/* ==================== GenerarInforme.html ====================*/
-.container {
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 2px solid #a259ff;
+  z-index: 999;
+}
+
+.bottom-nav a {
+  color: black;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-nav a:hover {
+  color: #a259ff;
+}
+
+.bottom-nav .qr-button {
+  position: relative;
+  top: -20px; 
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(162, 89, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: url('/imagenes/QRProyecto.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ======================== Estilos de Configuracion.html ======================== */
+.Configuracion a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.Configuracion a:hover {
+  text-decoration: underline;
+}
+
+.Configuracion .container {
+  display: flex;
+  height: 100vh;
+  background: #fff;
+  padding-top: 30px;
+}
+
+.Configuracion .sidebar {
+  width: 220px;
+  background: #ededf7;
+  padding: 20px;
+  color: #6f6f6f;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Configuracion .sidebar .section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.Configuracion .sidebar nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #3a3a3a;
+}
+
+.Configuracion .sidebar nav a.active,
+.Configuracion .sidebar nav a:hover {
+  background: #e5e5ff;
+  color: #2c2cff;
+}
+
+.Configuracion .sidebar nav a .icon {
+  margin-right: 8px;
+}
+
+.Configuracion .sidebar hr {
+  border: none;
+  border-top: 1px solid #d1d1d1;
+  margin: 20px 0;
+}
+
+.Configuracion .content {
+  flex-grow: 1;
+  padding: 40px 50px;
+  overflow-y: auto;
+}
+
+.Configuracion .content header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.Configuracion .content header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.Configuracion .content header .user-info {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.Configuracion .content h1 {
+  margin-top: 0;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+/* ==================== GenerarInforme.html ====================*/ 
+.GenerarInforme .container {
     margin: auto;
     margin-top: 100px;
     width: 90%;
@@ -165,12 +251,12 @@ body {
     border: 2px solid #a259ff;
     backdrop-filter: blur(10px);
     position: relative;
-    z-index: 1;
+    z-index: 6;
     padding: 30px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.container_header {
+.GenerarInforme .container_header {
     position: absolute;
     top: -25px;
     left: 50%;
@@ -184,18 +270,19 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper {
+.GenerarInforme .wrapper {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.form-group {
+.GenerarInforme .form-group {
     width: 100%;
 }
 
-input, select {
+.GenerarInforme input,
+.GenerarInforme select {
     width: 100%;
     padding: 12px;
     background: #000;
@@ -206,7 +293,7 @@ input, select {
     text-align: center;
 }
 
-.btn {
+.GenerarInforme .btn {
     width: 100%;
     height: 50px;
     background: linear-gradient(to right, #9204FF, #000000);
@@ -219,70 +306,73 @@ input, select {
     transition: opacity 0.3s ease;
 }
 
-.btn:hover {
+.GenerarInforme .btn:hover {
     opacity: 0.9;
 }
 
-/* ==================== Home.html ==================== */
+/* ==================== Home.html ==================== */ 
+
 .news-card {
-    margin: 80px auto auto auto; 
-    padding: 25px 20px;
-    max-width: 450px;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: justify;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(6px);
-    z-index: 1;
-    margin-bottom: 200px;
+  margin: 80px auto auto auto;
+  padding: 25px 20px;
+  max-width: 450px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: justify;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  margin-bottom: 200px;
+  position: relative;
+  z-index: 9;
 }
 
 .news-header {
-    font-weight: bold;
-    color: #ff4242;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 5px;
+  font-weight: bold;
+  color: #ff4242;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
 }
 
 .news-content p {
-    margin-bottom: 10px;
-    line-height: 1.4;
-    font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 0.95rem;
 }
 
 .news-content a {
-    color: #50aaff;
-    word-break: break-all;
-    font-size: 0.9rem;
+  color: #50aaff;
+  word-break: break-all;
+  font-size: 0.9rem;
 }
 
 .news-content .btn {
-    margin-top: 15px;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    background: linear-gradient(to right, #9204FF, #000000);
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 15px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #9204FF, #000000);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .news-content .btn:hover {
-    background: linear-gradient(to right, #6e00cc, #000000);
+  background: linear-gradient(to right, #6e00cc, #000000);
 }
 
-/* ==================== Login.html ==================== */
-.Login {
-  .loginForm {
-    input, select {
+/* ======================== Estilos de Login.html ========================*/
+
+/* ======================== Estilos de Login.html ======================== */
+.Login .loginForm input,
+.Login .loginForm select {
     width: 100%;
     padding: 12px;
     background: #ffffff;  
@@ -292,17 +382,17 @@ input, select {
     font-size: 1rem;
     text-align: left; 
     margin-bottom: 50px;
-    }
-  }
-  .login-wrapper {
+}
+
+.Login .login-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+}
 
-  .login-card {
+.Login .login-card {
     display: flex;
     width: 700px;
     height: 400px;
@@ -313,9 +403,9 @@ input, select {
     z-index: 99999;
     margin-left: 20px;
     margin-right: 20px;
-  }
+}
 
-  .left-panel {
+.Login .left-panel {
     background: linear-gradient(135deg, #0c8dc9 85%, transparent 60%);
     color: white;
     padding: 2rem;
@@ -324,14 +414,14 @@ input, select {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-  }
+}
 
-  .left-panel h2 {
+.Login .left-panel h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
+}
 
-  .signup-btn {
+.Login .signup-btn {
     background: white;
     color: #0c8dc9;
     border: none;
@@ -340,39 +430,39 @@ input, select {
     cursor: pointer;
     font-weight: bold;
     margin-top: 1rem;
-  }
+}
 
-  .signup-btn:hover {
+.Login .signup-btn:hover {
     background: #f0f0f0;
-  }
+}
 
-  .right-panel {
+.Login .right-panel {
     padding: 2rem;
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
 
-  .right-panel h3 {
+.Login .right-panel h3 {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     color: #333;
-  }
+}
 
-  form label {
+.Login form label {
     display: block;
     margin-bottom: 0.3rem;
     font-weight: 500;
     color: #555;
-  }
+}
 
-  .required {
+.Login .required {
     color: red;
     margin-left: 3px;
-  }
+}
 
-  form input {
+.Login form input {
     width: 100%;
     background-color: rgb(255, 255, 255);
     color: #000;
@@ -382,13 +472,13 @@ input, select {
     border-radius: 25px;
     outline: none;
     transition: border-color 0.3s;
-  }
+}
 
-  form input:focus {
+.Login form input:focus {
     border-color: #0c8dc9;
-  }
+}
 
-  .signin-btn {
+.Login .signin-btn {
     width: 100%;
     padding: 10px;
     border-radius: 25px;
@@ -399,112 +489,137 @@ input, select {
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 0.5rem;
-  }
+}
 
-  .signin-btn:hover {
+.Login .signin-btn:hover {
     background: #0c8dc9;
     color: white;
-  }
+}
 
-  .forgot-link {
+.Login .forgot-link {
     display: block;
     margin-top: 1rem;
     text-align: center;
     color: #0c8dc9;
     font-size: 0.9rem;
     text-decoration: none;
-  }
+}
 
-  .forgot-link:hover {
+.Login .forgot-link:hover {
     text-decoration: underline;
-  }
 }
 /* ==================== PaginaenMantenimiento.html ==================== */
-.maintenance-box-wrapper {
-
-  flex:1; 
-  display:flex; 
-  justify-content:center; 
-  align-items:center; 
-  text-align:center; 
-  z-index:1; 
-  position:relative; 
-  padding: 20px;
+.PaginaenMantenimiento * {
+  z-index: 6;
 }
 
-.maintenance-box {
-    
-    background: rgba(255, 255, 255, 0.7);
-    padding: 40px 30px;
-    border-radius: 20px;
-    max-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-/* ==================== QRGenerador.html ==================== */
-.QR {
-    #qrcode {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      display: none; 
-    }
-    #qrcode canvas {
-      width: 200px;
-      height: 200px;
-    }
-    #logo-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 80px;      
-      height: 80px;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 10;
-    }
-    #logo-overlay img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .btn-generar {
-      margin-top: 10px;
-      padding: 10px 20px;
-      cursor: pointer;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .QR-text {
-      text-align: center;
-      font-family: monospace;
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .QR-wrapper {
+.PaginaenMantenimiento .maintenance-box-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; 
+  height: 100vh;
+  width: 100%;
 }
 
-.QR-box {
+.PaginaenMantenimiento .maintenance-box {
+  max-width: 500px;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
 }
 
-#qrcode {
-  margin: 0 auto; 
-  position: relative;
-  width: 250px;
-  height: 250px;
-  display: none;
+.PaginaenMantenimiento .maintenance-box h1 {
+  font-size: 26px;
+  color: #111;
+  margin-bottom: 15px;
 }
 
+.PaginaenMantenimiento .maintenance-box p {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+}
 
+.PaginaenMantenimiento .maintenance-box a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3e94f7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 
-  .QR-wrapper {
+}
+
+.PaginaenMantenimiento .maintenance-box a:hover {
+  background-color: #3283c5;
+}
+
+/* ======================== Estilos de PaneldeAdministrador.html ======================== */
+
+/* ======================== Estilos de QRGenerado.html ======================== */
+
+.QR #qrcode {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: none; 
+}
+
+.QR #qrcode canvas {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.QR #logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;      
+    height: 80px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.QR #logo-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.QR .btn-generar {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 17, 255);
+    width: 150px;
+    height: 50px;
+}
+
+.QR .btn-generar:hover {
+    background-color: #6e00cc;
+}
+
+.QR .QR-text {
+    text-align: center;
+    font-family: monospace;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.QR .QR-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -512,17 +627,9 @@ input, select {
     padding: 20px;
     margin-top: 50px;
     align-content: center;
-    justify-content: center;
-  }
+}
 
-  .QR-text {
-    font-weight: bold;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .QR-box {
+.QR .QR-box {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -536,9 +643,10 @@ input, select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+    text-align: center;
+}
 
-  .qr {
+.QR .qr {
     display: none;
     width: 250px;
     height: 250px;
@@ -548,26 +656,15 @@ input, select {
     margin: 30px auto;
     align-items: center;
     justify-content: center;
-  }
-
-  .btn-generar {
-    background-color: rgb(0, 17, 255);
-    margin-top: 20px;
-    width: 150px;
-    height: 50px;
-  }
-  .btn-generar:hover {
-    background-color: #6e00cc;
-  }
 }
 
-/* ==================== RecuperarContraseña.html ==================== */
+/* ======================== Estilos de RecuperarContraseña.html ======================== */
 .steps {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin: 30px 0;
-  margin-top: 70px;
+  margin-top: 80px;
+  margin-bottom: 20px;
   font-size: 15px;
   z-index: 10; 
 }
@@ -606,7 +703,7 @@ input, select {
   justify-content: center;
   margin-right: 8px;
   font-size: 14px;
-  z-index: 10;
+  z-index: 10; 
 }
 
 .steps > div.active {
@@ -683,135 +780,139 @@ input, select {
 .btn:hover {
   background: #043863;
 }
-/* ==================== Scanner.html ==================== */
-/* ==================== Tablas.html ==================== */
-.table-container {
-  margin: 30px;
-  z-index: 999;
+
+/* ======================== Estilos de Tabla.html ======================== */
+
+.Tabla table,
+.Tabla .pagination-controls,
+.Tabla .search-and-button-container {
+    position: relative;
+    z-index: 9;
 }
 
-.table-title {
-  text-align: center;
-  margin-top: 70px;
-  color: rgb(255, 255, 255);
-  margin-bottom: 20px;
+.Tabla .table-container {
+    margin: 30px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.Tabla .table-title {
+    text-align: center;
+    margin-top: 70px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
 }
 
-thead {
-  background-color: #1976d2;
-  color: white;
+.Tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
+.Tabla thead {
+    background-color: #1976d2;
+    color: white;
 }
 
-tbody tr:hover {
-  background-color: #f1f1f1;
+.Tabla th,
+.Tabla td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
 }
 
-.dni {
-  font-size: 0.9em;
-  color: gray;
-  display: block;
-  margin-top: 4px;
+.Tabla tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 80px;
+.Tabla .dni {
+    font-size: 0.9em;
+    color: gray;
+    display: block;
+    margin-top: 4px;
 }
 
-.pagination-info {
-  color: #ffffff;
-}
-.pagination-controls button {
-  padding: 6px 12px;
-  margin: 0 5px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.Tabla .pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 80px;
 }
 
-.pagination {
-  flex-direction: column;
-  align-items: center;
+.Tabla .pagination-info {
+    color: #ffffff;
 }
 
-.pagination-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
+.Tabla .pagination-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
-.pagination-controls button.active {
-  background-color: #0077ff;
-  font-weight: bold;
+.Tabla .pagination-controls button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-
-
-.pagination-controls button:disabled {
-  background-color: #ccc;
-  cursor: default;
+.Tabla .pagination-controls button.active {
+    background-color: #0077ff;
+    font-weight: bold;
 }
 
-.search-and-button-container {
-  display: flex;
-  width: 100%;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.Tabla .pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: default;
 }
 
-.search-container input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: left;
-  background-color: #fff; 
-  color: #000;
+.Tabla .search-and-button-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
+.Tabla .search-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    background-color: #fff;
+    color: #000;
 }
 
-button {
-  padding: 8px 16px;
-  background-color: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.Tabla .buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
 }
 
-button:hover {
+.Tabla button {
+    padding: 8px 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Tabla button:hover {
     background-color: #1565c0;
 }
-/* ==================== Versión móvil ==================== */
+
+/* ======================== Versión móvil ======================== */
 @media (min-width: 768px) {
     .bottom-nav {
     display: none;
@@ -848,6 +949,8 @@ button:hover {
     .mobile-menu-button {
         display: block;
     }
+
+    
     /* Tablas */
     .search-and-button-container {
       flex-direction: column;
@@ -872,7 +975,6 @@ button:hover {
         overflow-y: auto;
     }
 }
-
 
 
 

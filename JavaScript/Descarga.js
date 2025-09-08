@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const botonDescargar = document.getElementById("descargarPDF");
 
-  botonDescargar.addEventListener("click", async function () {
+botonDescargar.addEventListener("click", async function () {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     doc.setFontSize(12);
     doc.setFont("helvetica", "normal");
     doc.text(
-      "Este documento contiene información relevante sobre el acceso y registro de los usuarios al sistema del Instituto Técnologico Beltran.",
-      10,
-      30
+      "Este documento contiene información relevante sobre el acceso y registro de los usuarios al sistema", 10, 30
     );
 
     const texto =
@@ -23,12 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "realizadas por estudiantes, docentes y personal administrativo. \n\n" +
       "Cada usuario dispone de credenciales únicas para ingresar al sistema. " +
       "Es responsabilidad de cada individuo mantener la confidencialidad de sus datos de acceso y seguir los protocolos establecidos. \n\n" +
-      "Ante cualquier inconveniente o actividad sospechosa, solicitamos comunicarse con el área de soporte institucional.";
+      "Ante cualquier inconveniente o actividad sospechosa, solicitamos comunicarse con el área de soporte institucional"
+    ;
 
     doc.text(texto, 10, 40, { maxWidth: 190 });
 
     const img = new Image();
-    img.src = "../imagenes/logo1.webp";
+    img.src = "";
 
     img.onload = function () {
       doc.addImage(img, "webp", 150, 10, 40, 20);
