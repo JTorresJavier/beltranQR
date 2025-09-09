@@ -35,10 +35,10 @@ app.post('/api/login', (req, res) => {
 
     const user = results[0];
     if (password === user.password) {
-  return res.status(200).json({ success: true });
-} else {
-  return res.status(401).json({ success: false, message: "Credenciales incorrectas" });
-}
+      return res.status(200).json({ success: true });
+    } else {
+      return res.status(401).json({ success: false, message: "Credenciales incorrectas" });
+    }
   });
 });
 

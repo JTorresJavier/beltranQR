@@ -89,21 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
   window.sendCode = function () {
-    console.log("Código enviado a tu correo.");
     i = 2;  
     nextStep(i);
   };
 
   window.verifyCode = function () {
-    console.log("Código verificado.");
     i = 3;  
     nextStep(i);
   };
 
   window.changePassword = function () {
-    console.log("Contraseña cambiada.");
     i = 4;  
     nextStep(i);
   };
