@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const recpass = document.getElementById("recpass");
 
-  let i = 1; 
+  let i = 1;
 
   function nextStep(step) {
-    recpass.innerHTML = ""; 
+    recpass.innerHTML = "";
 
     switch (step) {
       case 1:
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       case 2:
         recpass.innerHTML = `
           <div class="steps">
-            <div class="completed"><div class="circle">1</div>Ingresar Correo</div>
+            <div class="completed"><div class="circle"><i class="fas fa-check"></i></div>Ingresar Correo</div>
             <div class="active"><div class="circle">2</div>Verificación</div>
             <div><div class="circle">3</div>Cambiar Contraseña</div>
             <div><div class="circle">4</div>Paso final</div>
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
       case 3:
         recpass.innerHTML = `
           <div class="steps">
-            <div class="completed"><div class="circle">1</div>Ingresar Correo</div>
-            <div class="completed"><div class="circle">2</div>Verificación</div>
+            <div class="completed"><div class="circle"><i class="fas fa-check"></i></div>Ingresar Correo</div>
+            <div class="completed"><div class="circle"><i class="fas fa-check"></i></div>Verificación</div>
             <div class="active"><div class="circle">3</div>Cambiar Contraseña</div>
             <div><div class="circle">4</div>Paso final</div>
           </div>
@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
       case 4:
         recpass.innerHTML = `
           <div class="steps">
-            <div class="completed"><div class="circle">1</div>Ingresar Correo</div>
-            <div class="completed"><div class="circle">2</div>Verificación</div>
-            <div class="completed"><div class="circle">3</div>Cambiar Contraseña</div>
+            <div class="completed"><div class="circle"><i class="fas fa-check"></i></div>Ingresar Correo</div>
+            <div class="completed"><div class="circle"><i class="fas fa-check"></i></div>Verificación</div>
+            <div class="completed"><div class="circle"><i class="fas fa-check"></i></div>Cambiar Contraseña</div>
             <div class="active"><div class="circle">4</div>Paso final</div>
           </div>
           <div class="recovery-password-container">
@@ -84,28 +84,46 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="btn" onclick="goToLogin()">Ir al login</button>
           </div>`;
         break;
+
       default:
         break;
     }
   }
 
   window.sendCode = function () {
-    i = 2;  
-    nextStep(i);
+    const email = document.querySelector('#email-form input[type="email"]').value;
+
+    fetch("http://localhost:3000/api/auth/forgot-password", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.message) {
+          alert(data.message);
+          i = 2;
+          nextStep(i);
+        } else {
+          alert("Error: " + (data.error || "No se pudo enviar"));
+        }
+      })
+      .catch(err => console.error(err));
   };
 
   window.verifyCode = function () {
-    i = 3;  
+    i = 3;
     nextStep(i);
   };
 
   window.changePassword = function () {
-    i = 4;  
+    i = 4;
     nextStep(i);
   };
-window.goToLogin = function () {
-    window.location.href = "../paginas/Login.html";  
-};
+
+  window.goToLogin = function () {
+    window.location.href = "../paginas/Login.html";
+  };
 
   nextStep(i);
 });
