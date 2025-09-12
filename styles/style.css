@@ -675,6 +675,8 @@ body {
   align-items: center;
   color: #666666;
   z-index: 10; 
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .steps > div::after {
@@ -726,7 +728,6 @@ body {
 
 .steps > div.completed .circle {
   background: #2d8659;
-  content: "✔";
   font-size: 14px;
 }
 
@@ -745,6 +746,7 @@ body {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10; 
+  transition: all 0.3s ease;
 }
 
 .recovery-password-info-box {
@@ -755,6 +757,30 @@ body {
   text-align: left;
   font-size: 14px;
   margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+.recovery-password-info-box ul {
+  list-style: none;      
+  padding-left: 0;
+  margin: 0;
+}
+
+.recovery-password-info-box li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;    
+  counter-increment: step;
+}
+
+.recovery-password-info-box li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #fff;
 }
 
 .form-input {
@@ -765,6 +791,12 @@ body {
   border-radius: 4px;
   font-size: 14px;
   box-sizing: border-box;
+  z-index: 10; 
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #1465a8;
 }
 
 .btn {
@@ -775,10 +807,24 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 15px;
+  z-index: 10; 
 }
 
 .btn:hover {
   background: #043863;
+  transform: translateY(-2px);
+}
+
+.recovery-password-container h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #1465a8;
+}
+
+.recovery-password-container p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #444;
 }
 
 /* ======================== Estilos de Tabla.html ======================== */
