@@ -1,5 +1,27 @@
 /* ======================== Estilos generales ======================== */
-* {
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f75bc 70%, #000);
+  font-family: Arial, sans-serif;
+}
+
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+.header img{
+  height: 550px;
+  margin-bottom: 130px;
+}
+
+
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,9 +82,9 @@ body {
 
 .header img {
   height: 45px;
-}
+} */
 
-.hamburger {
+/* .hamburger {
   background: none;
   border: none;
   font-size: 24px;
@@ -130,9 +152,9 @@ body {
 
 .bottom-nav a:hover {
   color: #a259ff;
-}
+} */
 
-.bottom-nav .qr-button {
+/* .bottom-nav .qr-button {
   position: relative;
   top: -20px; 
   width: 80px;
@@ -147,7 +169,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 /* ======================== Estilos de Configuracion.html ======================== */
 .Configuracion a {
@@ -390,6 +412,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -300px;
 }
 
 .Login .login-card {
@@ -403,6 +426,7 @@ body {
     z-index: 99999;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: -100px;
 }
 
 .Login .left-panel {
@@ -466,7 +490,7 @@ body {
     width: 100%;
     background-color: rgb(255, 255, 255);
     color: #000;
-    padding: 10px 15px;
+    padding: 10px;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 25px;
@@ -561,6 +585,18 @@ body {
 /* ======================== Estilos de PaneldeAdministrador.html ======================== */
 
 /* ======================== Estilos de QRGenerado.html ======================== */
+.menulogo{
+  height: 70px;
+  border-radius: 15px;
+}
+.boton{
+  margin-right: 20px;
+}
+.menulogo1{
+  height: 70px;
+  border-radius: 15px;
+  display: none;
+}
 
 .QR #qrcode {
     position: relative;
@@ -675,8 +711,6 @@ body {
   align-items: center;
   color: #666666;
   z-index: 10; 
-  font-weight: 500;
-  transition: color 0.3s;
 }
 
 .steps > div::after {
@@ -728,6 +762,7 @@ body {
 
 .steps > div.completed .circle {
   background: #2d8659;
+  content: "✔";
   font-size: 14px;
 }
 
@@ -746,7 +781,6 @@ body {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10; 
-  transition: all 0.3s ease;
 }
 
 .recovery-password-info-box {
@@ -757,30 +791,6 @@ body {
   text-align: left;
   font-size: 14px;
   margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-
-.recovery-password-info-box ul {
-  list-style: none;      
-  padding-left: 0;
-  margin: 0;
-}
-
-.recovery-password-info-box li {
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 25px;    
-  counter-increment: step;
-}
-
-.recovery-password-info-box li::before {
-  content: counter(step) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
-  color: #fff;
 }
 
 .form-input {
@@ -791,12 +801,6 @@ body {
   border-radius: 4px;
   font-size: 14px;
   box-sizing: border-box;
-  z-index: 10; 
-  transition: border-color 0.3s;
-}
-
-.form-input:focus {
-  border-color: #1465a8;
 }
 
 .btn {
@@ -807,24 +811,10 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 15px;
-  z-index: 10; 
 }
 
 .btn:hover {
   background: #043863;
-  transform: translateY(-2px);
-}
-
-.recovery-password-container h2 {
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #1465a8;
-}
-
-.recovery-password-container p {
-  font-size: 15px;
-  margin-bottom: 20px;
-  color: #444;
 }
 
 /* ======================== Estilos de Tabla.html ======================== */
@@ -959,6 +949,142 @@ body {
 }
 
 /* ======================== Versión móvil ======================== */
+@media (max-width: 2050px){
+  .Login .login-card{
+    margin-bottom: -195px;
+  }
+}
+
+@media (max-width: 790px){
+  .Login .login-card{
+    margin-bottom: -50px;
+  }
+}
+
+/*//////////////////////////asdsadadadsadsa////////////////////////////*/
+
+/* @media (max-width: 1093px){
+  .qr h1{
+    text-align: center;
+  }
+} */
+
+@media (max-width: 992px){
+  .menulogo{
+    display: none;
+  }
+  .menulogo1{display: inline-block;}
+
+  /* .qr h1{
+    text-align: center;
+  } */
+}
+
+/*///////////////////////////////*/
+@media (max-width: 650px){
+  /* .header{
+    margin-bottom: -70px;
+  }
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+  .menulogo{
+    display: none;
+  }
+  
+  .menulogo1{
+    height: 60px;
+  }
+
+  /* .container{
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+}
+
+
+/*////////////////////////////////*/
+/* @media (max-width: 430px){
+  .header{
+    margin-bottom: -110px;
+  }
+
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+} */
+
+
+/*////////////////////////////////*/
+@media (max-width: 375px){
+  /* .header{
+    margin-bottom: -110px;
+  }
+
+  .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+
+  .menulogo1{
+    height: 55px;
+  }
+}
+
+/*////////////////////////////////*/
+@media (max-width: 394px){
+  /* .container{
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+
+  .menulogo1{
+    height: 50px;
+  }
+}
+
+/*////////////////////////////////*/
+@media (max-width: 360px){
+  /* .contenedor{
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+
+  .menulogo1{
+    height: 50px;
+  }
+}
+
+/*////////////////////////////////*/
+@media (max-width: 345px){
+  /* .container{
+    margin-left: 10%;
+    margin-right: 10%;
+  } */
+
+  .menulogo1{
+    height: 45px;
+  }
+}
+
+/*////////////////////////////////*/
+@media (max-width: 321px){
+  .menulogo1{
+    height: 40px;
+  }
+}
+
+@media (max-width: 296px){
+  .menulogo1{
+    height: 35px;
+  }
+}
+
+/*///////////////////////////////asdsadsadsadsadsadasd///////////////////////*/
+
+
 @media (min-width: 768px) {
     .bottom-nav {
     display: none;

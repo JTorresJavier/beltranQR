@@ -152,6 +152,52 @@ main {
   height: 600px;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.qr-fab{
+    --size: 78px;
+    --blue: #009ee3;
+    --ring: 8px;
+
+    position: fixed;             /* centrado al estilo MP */
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%); /* ¡clave! mantenerlo en todos los estados */
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at 35% 30%, #2ec4ff 0%, var(--blue) 70%);
+    color: #fff;
+    border: var(--ring) solid #fff;
+    box-shadow:
+      0 10px 24px rgba(0,0,0,.28),
+      0 0 0 12px rgba(0,158,227,.18);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    will-change: transform;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  .qr-fab:hover{
+    transform: translateX(-50%) scale(1.03); /* leve zoom */
+  }
+  .qr-fab:active{
+    transform: translateX(-50%) scale(1.07); /* zoom al click */
+  }
+
+  .qr-icon{
+    width: calc(var(--size) * .42);
+    height: calc(var(--size) * .42);
+    fill: currentColor;
+    display: block;
+  }
+  /* OPCIONAL: fijarlo centrado abajo, como en MP */
+  .qr-fab{
+       position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+     }
 /*//////////CSS QR.HTML/////////*/
 .qr{
   display: flex;
